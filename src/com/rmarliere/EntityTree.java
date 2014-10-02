@@ -6,6 +6,7 @@ package com.rmarliere;
  * Assignment: Task 1
  * Class: CS 349
  */
+
 public class EntityTree extends Entity {
 
     public String move = "swaying";
