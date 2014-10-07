@@ -7,17 +7,15 @@ package com.rmarliere;
  * Class: CS 349
  */
 
-public class EntityDog extends Entity {
+public class EntityAlien extends Entity {
 
-    public String move = "walking";
-    public String type = "biting";
+    public final String move = "teleporting";
+    public final String type = "raygun";
 
-    public EntityDog(String identifier)
+    public EntityAlien(String identifier)
     {
         setID(identifier);
         setMove(move);
         setType(type);
     }
-
-
 }

@@ -15,13 +15,13 @@ public class Entity {
 
     public void initiateAttack(Entity attacked_object)
     {
-        move();
         if (!isAttackValid(attacked_object,this))
         {
             System.out.println(this.getID() + " can't attack a " + attacked_object.getID());
         }
         else
         {
+            move();
             System.out.println(getID() + " initiated " + getType() +  " attack against " + attacked_object.getID());
             attacked_object.receiveAttack(this);
         }
@@ -39,15 +39,23 @@ public class Entity {
 
     private boolean isAttackValid(Entity attacked, Entity attacking)
     {
-        if (attacking instanceof EntityDog && attacked instanceof EntityGhost)
+        //dog
+        if (attacking instanceof EntityDawg && (attacked instanceof EntityGhost || attacked instanceof EntityAlien))
         {
             return false;
         }
+        //tree
         if (attacking instanceof EntityTree)
         {
             return false;
         }
-        if (attacking instanceof EntityGhost && attacked instanceof EntityGhost)
+        //ghost
+        if (attacking instanceof EntityGhost && (attacked instanceof EntityGhost || attacked instanceof EntityAlien))
+        {
+            return false;
+        }
+        //cat
+        if (attacking instanceof EntityCat && (attacked instanceof EntityGhost || attacked instanceof EntityAlien))
         {
             return false;
         }
@@ -73,6 +81,7 @@ public class Entity {
     {
         this.move = move;
     }
+
     public String getMove()
     {
         return this.move;

@@ -9,8 +9,8 @@ package com.rmarliere;
 
 public class EntityGhost extends Entity {
 
-    public String move = "floating";
-    public String type = "supernatural";
+    public final String move = "floating";
+    public final String type = "supernatural";
 
     public EntityGhost(String identifier)
     {

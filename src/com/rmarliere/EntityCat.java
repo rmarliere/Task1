@@ -7,13 +7,15 @@ package com.rmarliere;
  * Class: CS 349
  */
 
-public class EntityTree extends Entity {
+public class EntityCat extends Entity {
 
-    public final String move = "swaying";
+    public final String move = "slinking";
+    public final String type = "claw";
 
-    public EntityTree(String identifier)
+    public EntityCat(String identifier)
     {
         setID(identifier);
         setMove(move);
+        setType(type);
     }
 }

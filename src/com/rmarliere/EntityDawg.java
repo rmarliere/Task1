@@ -7,13 +7,15 @@ package com.rmarliere;
  * Class: CS 349
  */
 
-public class EntityTree extends Entity {
+public class EntityDawg extends Entity {
 
-    public final String move = "swaying";
+    public final String move = "walking";
+    public final String type = "biting";
 
-    public EntityTree(String identifier)
+    public EntityDawg(String identifier)
     {
         setID(identifier);
         setMove(move);
+        setType(type);
     }
 }
